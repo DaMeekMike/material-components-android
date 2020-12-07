@@ -1,11 +1,11 @@
 buildscript {
-  ext.kotlinVersion = '1.3.50'
+  ext.kotlinVersion = '1.4.20'
   repositories {
     google()
     jcenter()
   }
   dependencies {
-    classpath 'com.android.tools.build:gradle:4.0.0'
+    classpath 'com.android.tools.build:gradle:4.2.0-alpha16'
     classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
   }
 }
@@ -19,20 +19,20 @@ allprojects {
 }
 
 ext {
-  compileSdkVersion = 29
+  compileSdkVersion = 30
   minSdkVersion = 14
-  targetSdkVersion = 29
+  targetSdkVersion = 30
 
   androidXVersions = [
     annotation            : '1.0.1',
-    appCompat             : '1.1.0',
+    appCompat             : '1.2.0',
     cardView              : '1.0.0',
-    constraintlayout      : '2.0.1',
+    constraintlayout      : '2.0.4',
     coordinatorlayout     : '1.1.0',
-    core                  : '1.2.0',
+    core                  : '1.3.2',
     experimental          : '1.0.0',
-    fragment              : '1.0.0',
-    lifecycle             : '2.0.0',
+    fragment              : '2.3.2',
+    lifecycle             : '2.2.0',
     recyclerView          : '1.0.0',
     recyclerViewSelection : '1.0.0',
     transition            : '1.2.0',
@@ -42,7 +42,7 @@ ext {
   ]
 
   testRunnerVersion = '1.1.0'
-  espressoVersion = '3.1.0'
+  espressoVersion = '3.3.0'
   mockitoCoreVersion = '2.25.0'
   truthVersion = '0.45'
 
@@ -193,8 +193,8 @@ subprojects {
         // This disables the builds tools automatic vector -> PNG generation
         defaultConfig.generatedDensities = []
 
-        compileOptions.sourceCompatibility JavaVersion.VERSION_1_7
-        compileOptions.targetCompatibility JavaVersion.VERSION_1_7
+        compileOptions.sourceCompatibility JavaVersion.VERSION_1_8
+        compileOptions.targetCompatibility JavaVersion.VERSION_1_8
 
         aaptOptions.additionalParameters "--no-version-vectors"
 
