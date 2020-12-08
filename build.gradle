@@ -41,10 +41,10 @@ ext {
     dynamicanimation      : '1.0.0',
   ]
 
-  testRunnerVersion = '1.1.0'
+  testRunnerVersion = '1.3.0'
   espressoVersion = '3.3.0'
   mockitoCoreVersion = '2.25.0'
-  truthVersion = '0.45'
+  truthVersion = '1.1'
 
   // Enforce the use of prebuilt dependencies in all sub-projects. This is
   // required for the doclava dependency.
